@@ -29,7 +29,7 @@ submit.onclick=function(){
     }
     if(willRecord) answer+="Your all set! Have fun :)";
     alert(answer);
-}
+};
 
 
 
@@ -45,12 +45,12 @@ submit.onclick=function(){
 var namesOk=function(firstName,lastName){
     if(/^([a-zA-Z])$/.test(firstName)&&(/^([a-zA-Z])$/.test(lastName)))return true;
     return false;
-}
+};
 var emailOk=function(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-}
+};
 var passwordOk=function(password,password2){
     if(password===password2)return true;
     return false;
-}
+};
