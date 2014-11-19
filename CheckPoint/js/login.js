@@ -3,7 +3,7 @@
  */
 //main
 var submit = document.getElementById("submit-btn");
-var firstName,lastName,email,password,passwordRetype,answer,willRecord
+var firstName,lastName,email,password,passwordRetype,answer,willRecord;
 submit.onclick=function(){
     firstName=document.getElementById("inputFirst").value;
     lastName=document.getElementById("inputLast").value;
@@ -14,17 +14,17 @@ submit.onclick=function(){
     answer="";
     if(!namesOk(firstName,lastName)){
         if(willRecord==true)answer+="We can't sign you up because:\n";
-        willRecord=false
+        willRecord=false;
         answer+="You did not enter a valid first/last name!\n";
     }
     if(!emailOk(email)){
         if(willRecord==true)answer+="We can't sign you up because:\n";
-        willRecord=false
+        willRecord=false;
         answer+="You did not enter a valid email!\n";
     }
     if(!passwordOk(password,passwordRetype)){
         if(willRecord==true)answer+="We can't sign you up because:\n";
-        willRecord=false
+        willRecord=false;
         answer+="Your passwords don't match!";
     }
     if(willRecord) answer+="Your all set! Have fun :)";
