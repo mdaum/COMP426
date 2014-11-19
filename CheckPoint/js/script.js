@@ -11,6 +11,57 @@ $(document).on("click", "#sign-up-btn", function() {
 	$("#login-or-join").empty();
 	$("#login-or-join").append(
 		'<h1>SIGN UP</h1><div id="log-in-btn"><button type="button" id="log-in-btn">Log In</button></div><hr><form role="form" id="sign-up"><div class="form-group"><input type="text" class="form-control" id="inputFirst" placeholder="First name"><input type="text" class="form-control" id="inputLast" placeholder="Last name"><input type="email" class="form-control" id="inputEmail" placeholder="Enter email"></div><div class="form-group"><input type="password" class="form-control" id="inputPassword" placeholder="Password"><input type="password" class="form-control" id="inputRetypePassword" placeholder="Retype password"></div><div id="signup-btn"><button type="submit" class="btn" id="submit-btn">Sign Up</button></div></form>');
+    submit=document.getElementById("submit-btn");
+    var firstName,lastName,email,password,passwordRetype,answer,willRecord;
+    submit.onclick=function(){
+        firstName=document.getElementById("inputFirst").value;
+         lastName=document.getElementById("inputLast").value;
+         email=document.getElementById("inputEmail").value;
+         password=document.getElementById("inputPassword").value;
+         passwordRetype=document.getElementById("inputRetypePassword").value;
+         willRecord=true;
+         answer="";
+         if(!namesOk(firstName,lastName)){
+         if(willRecord==true)answer+="We can't sign you up because:\n";
+         willRecord=false;
+         answer+="You did not enter a valid first/last name!\n";
+         }
+         if(!emailOk(email)){
+         if(willRecord==true)answer+="We can't sign you up because:\n";
+         willRecord=false;
+         answer+="You did not enter a valid email!\n";
+         }
+         if(!passwordOk(password,passwordRetype)){
+         if(willRecord==true)answer+="We can't sign you up because:\n";
+         willRecord=false;
+         answer+="Your passwords don't match!";
+         }
+         if(willRecord) answer+="Your all set! Have fun :)";
+         alert(answer);
+    };
+
+
+
+
+
+
+
+
+
+
+//functions
+    var namesOk=function(firstName,lastName){
+        if(/[a-z0-9]/.test(firstName)&&(/[a-z0-9]/.test(lastName)))return true;
+        return false;
+    };
+    var emailOk=function(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+    var passwordOk=function(password,password2){
+        if(password===password2)return true;
+        return false;
+    };
 });
 
 $(document).on("click", "#log-in-btn", function() {
