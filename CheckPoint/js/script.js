@@ -10,7 +10,7 @@ $(function() {
 $(document).on("click", "#sign-up-btn", function() {
 	$("#login-or-join").empty();
 	$("#login-or-join").append(
-		'<h1>SIGN UP</h1><div id="log-in-btn"><button type="button" id="log-in-btn">Log In</button></div><hr><form role="form" id="sign-up"><div class="form-group"><input type="text" class="form-control" id="inputFirst" placeholder="First name"><input type="text" class="form-control" id="inputLast" placeholder="Last name"><input type="email" class="form-control" id="inputEmail" placeholder="Enter email"></div><div class="form-group"><input type="password" class="form-control" id="inputPassword" placeholder="Password"><input type="password" class="form-control" id="inputRetypePassword" placeholder="Retype password"></div><div id="signup-btn"><button type="submit" class="btn">Sign Up</button></div></form>');
+		'<h1>SIGN UP</h1><div id="log-in-btn"><button type="button" id="log-in-btn">Log In</button></div><hr><form role="form" id="sign-up"><div class="form-group"><input type="text" class="form-control" id="inputFirst" placeholder="First name"><input type="text" class="form-control" id="inputLast" placeholder="Last name"><input type="email" class="form-control" id="inputEmail" placeholder="Enter email"></div><div class="form-group"><input type="password" class="form-control" id="inputPassword" placeholder="Password"><input type="password" class="form-control" id="inputRetypePassword" placeholder="Retype password"></div><div id="signup-btn"><button type="submit" class="btn" id="submit-btn">Sign Up</button></div></form>');
 });
 
 $(document).on("click", "#log-in-btn", function() {
