@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- OR SavePoint -->
-                <a class="navbar-brand" href="#">CheckPoint</a>
+                <a class="navbar-brand" href="content.php">CheckPoint</a>
             </div>
 
             <!-- Select difficulty (for game sort): easy medium hard -->
